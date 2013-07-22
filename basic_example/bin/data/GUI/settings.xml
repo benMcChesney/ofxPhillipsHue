@@ -1,0 +1,25 @@
+<Widget>
+    <Kind>2</Kind>
+    <Name>SAVE SETTINGS</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>DEBUG HTTP CALL</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>DEVELOPER USERNAME</Name>
+    <Value>newdeveloper</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>HUE BRIDGE IP ADDRESS</Name>
+    <Value>http://192.168.2.4</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>API METHOD</Name>
+    <Value>lights/1</Value>
+</Widget>
