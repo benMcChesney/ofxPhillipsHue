@@ -26,17 +26,18 @@ void testApp::update(){
         lightbulbs[ i ]->hueOffset += hueIncrement ;
         lightbulbs[ i ]->update() ;
         
-        if ( i == 0 )
+        if ( i == 0 && ofGetFrameNum() % 30 == 0 )
         {
            // cout << lightbulbs[ i ]->createJsonData() << endl  ;
             ///api/<username>/lights/<id>/state
-            action_url = ipAddress +   "/lights/1/state/hue/" + ofToString( lightbulbs[0]->hueOffset + lightbulbs[0]->hue );
+            action_url = ipAddress +"/api/"+username+"/lights/3/state/" ; //hue/" + ofToString( lightbulbs[0]->hueOffset + lightbulbs[0]->hue );
+            cout << "actioN_url:" << action_url << endl ; 
             ofxHttpForm form;
-            
+            form.name = "body";
             form.action = action_url;
-            form.method = OFX_HTTP_PUT ;
+            form.method = OFX_HTTP_POST ;
             form.addFormField("body", lightbulbs[ i ]->createJsonData() ) ;
-            httpUtils.addForm( form ) ; 
+            httpUtils.addForm( form ) ;
             requestStr = "message sent: " + ofToString(counter);
             counter++;
         }
@@ -193,7 +194,8 @@ void testApp::guiEvent ( ofxUIEventArgs &e )
 
 //--------------------------------------------------------------
 void testApp::newResponse(ofxHttpResponse & response){
-	responseStr = ofToString(response.status) + ": " + (string)response.responseBody;
+	responseStr = "testApp::newResponse " + ofToString(response.status) + ": " + (string)response.responseBody;
+    cout << responseStr << endl ; 
 }
 
 /*

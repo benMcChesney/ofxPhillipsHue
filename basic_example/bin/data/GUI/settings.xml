@@ -9,6 +9,11 @@
     <Value>0</Value>
 </Widget>
 <Widget>
+    <Kind>2</Kind>
+    <Name>GET BULB INFO</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
     <Kind>12</Kind>
     <Name>DEVELOPER USERNAME</Name>
     <Value>newdeveloper</Value>
@@ -16,10 +21,15 @@
 <Widget>
     <Kind>12</Kind>
     <Name>HUE BRIDGE IP ADDRESS</Name>
-    <Value>http://192.168.2.4</Value>
+    <Value>http://192.168.2.2</Value>
 </Widget>
 <Widget>
     <Kind>12</Kind>
     <Name>API METHOD</Name>
     <Value>lights/1</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>HUE INCREMENT</Name>
+    <Value>54.487178802</Value>
 </Widget>
